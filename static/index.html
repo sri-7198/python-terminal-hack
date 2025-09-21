@@ -1,27 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Python Runner</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Python Terminal</title>
   <style>
-    body { font-family: system-ui, -apple-system, Roboto, sans-serif; padding: 20px; background:#f6f8fa; color:#111 }
-    textarea { width:100%; max-width:900px; font-family: monospace; font-size:14px; }
-    pre { background:#0b0b0b; color:#e6e6e6; padding:10px; border-radius:6px; max-width:900px; overflow:auto }
-    button { padding:8px 14px; border-radius:6px; background:#0366d6; color:white; border:none; cursor:pointer }
+    body { background: black; color: lime; font-family: monospace; padding: 20px; }
+    #terminal { white-space: pre-wrap; max-height: 70vh; overflow-y: auto; }
+    .prompt { color: cyan; }
+    input { background: black; color: lime; border: none; width: 90%; font-family: monospace; }
+    input:focus { outline: none; }
   </style>
 </head>
 <body>
-  <h1>Python Code Runner</h1>
-  <p>Type Python code below and click <strong>Run Code</strong>.</p>
-
-  <textarea id="codeInput" rows="8" placeholder='print("Hello from browser")'></textarea>
-  <div style="margin:10px 0">
-    <button id="runBtn">Run Code</button>
+  <h2>Python-Based Command Terminal</h2>
+  <div id="terminal"></div>
+  <div>
+    <span class="prompt">$ </span>
+    <input id="cmdInput" type="text" autofocus autocomplete="off" />
   </div>
-
-  <h3>Output</h3>
-  <pre id="outputBox">(no output yet)</pre>
 
   <script src="terminal.js"></script>
 </body>
