@@ -1,29 +1,37 @@
-# Python-Based Command Terminal (Hackathon Project)
+# 🖥️ Python-Based Command Terminal (Hackathon Project)
 
-## Overview
+## 📌 Overview
 This project is built for the **CodeMate Hackathon** under the problem statement:
 
 > **Develop a fully functioning command terminal that mimics the behavior of a real system terminal.**  
-> Backend must be Python. Terminal should support standard commands and Python execution.  
-
-Our implementation:
-- Python backend using **Flask**
-- Web-based terminal UI built with **HTML + JS**
-- Supports:
-  - File/command operations (`ls`, `pwd`, etc. — extendable)
-  - Python execution via `!py <code>` or a code runner textbox
-- Deployed live on **CodeMate Build**
+> The backend of this terminal is powered by Python (Flask), and it can process and execute standard commands.  
+> It also provides a simple **web-based UI** for interaction.
 
 ---
 
-## Features
-- ✅ Python backend (Flask)
-- ✅ Web terminal interface
-- ✅ `/local_run` endpoint executes Python code with timeout and size limits
-- ✅ Clean frontend with a textarea + Run button
-- ✅ Terminal input supports `!py` prefix for Python commands
-- ⚡ Optional enhancements possible (command history, AI-driven natural language)
+## ✨ Features
+- ✅ **Python Backend** – Executes commands securely using `subprocess`  
+- ✅ **File & Directory Operations** – Supports commands like `ls`, `pwd`, `mkdir`, `rm`, etc.  
+- ✅ **Error Handling** – Invalid commands return clean error messages  
+- ✅ **Web Interface** – Access via `/static/index.html`  
+- ✅ **Deployed Online** – Runs on Render (cloud hosting)  
+- ⚡ **Optional**: Extend with AI-driven natural language commands  
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+- **Backend**: Python, Flask  
+- **Frontend**: HTML, CSS, JavaScript (minimal static page)  
+- **Deployment**: Render (Gunicorn + Flask)  
+- **Version Control**: Git + GitHub  
+
+---
+
+## 🚀 Live Demo
+🔗 [Try the Terminal in Browser](https://python-terminal-hack.onrender.com/static/index.html)  
+
+Example API Test:
+```bash
+curl -sS -X POST https://python-terminal-hack.onrender.com/local_run \
+  -H "Content-Type: application/json" \
+  -d '{"language":"python","code":"print(\"hello from deployed runner\")"}'
